@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Find the Product.
+    Write a program that takes an array as input from the user and find out the product of the elements.
+    
+    Note: You have to complete Find_Prod. No need to take any input.
+    <pre>const Find_Prod = (array, N) => 
+        {
+         const result=array.reduce((accu,cur)=>
+         accu = accu*cur,1)
+        
+         
+        return result;
+        };
+        </pre>
+        Find the Sum.
+        Write a program which takes an array as input from the user and find out the sum of the array elements.
+        
+        Note: You have to complete Find_Sum. No need to take any input.
+        <pre>const Find_Sum = (array, N) => 
+            {
+               const result=array.reduce((accu,cur)=>
+             accu = accu+cur,0)
+            
+             
+            return result;
+            
+            };
+ 
+        </pre>  
+        Count Occurrences
+        You are given an array 
+        A
+         containing 
+        N
+         integer elements and an integer 
+        K
+        , and your task is to return the count of occurrences of 
+        K
+         in array 
+        A
+        .
+        
+        Note: You have to complete findCount function. No need to take any input.
+        <pre>const findCount = (N, K, Arr) => 
+            {
+              let count=0;
+              for(let i = 0;i<N;i++){
+                if(Arr[i]==K){
+                  count=count+1;
+                }
+              }
+               return count; 
+            };
+             </pre>  
+             Even Odd
+You are given an array 
+A
+ containing 
+N
+ integer elements, and your task is to return an array 
+B
+ 
+(
+having a size equal to 
+2
+)
+, where 
+B
+[
+0
+]
+ contains the sum of all even elements of array A and 
+B
+[
+1
+]
+ has the sum of all odd elements of the array 
+A
+.
+<pre>const findEvenOdd = (N, Arr) => 
+    {
+      let B=[];
+      var a=Arr.filter((x)=>x%2===0)
+      var b=a.reduce((accu,cum)=>accu=accu+cum,0)
+      B.push(b);
+      
+      var c=Arr.filter((x)=>x%2!==0)
+      var d=c.reduce((accu,cum)=>accu=accu+cum,0)
+      B.push(d);
+      return B;
+    };
+     </pre> 
+     <pre>Find whether the number is present or not
+        Write a program which takes an array as input from the user and a number.
+        Check whether the number is present or not.
+        const Find_Num = (array,N,M) => 
+        {
+          let flag=0;
+          for(i=0;i<N;i++){
+            if(array[i]===M)
+              flag++;
+            }
+            if(flag>0){
+              return "YES";
+            }
+            else{
+              return "NO";
+          }
+        };
+        Higher Age
+        You are given an array 
+        A
+         containing the age of persons in your locality, and your task is to find and return an array containing the age of persons that are over 
+        18
+         
+        (
+        18
+         included
+        )
+        .
+        const highAge = (N, Arr) => 
+        {
+            const result = Arr.filter((N)=>N>=18)
+            return result;
+        };
+        Increment the Array Elements
+        You are provided an array of integers and you have to increment all array elements by 1 and then print whole array.
+        const Inc_Arr = (array,N) => 
+        {
+          
+        const result =array.map((N)=>N+1);
+        console.log(...result);
+        };
+        Pass or Fail
+        You are given an array 
+        A
+         containing the maths marks of students in your class, and your task is to determine if all the students pass in your class or not. A student is declared pass if his maths marks are greater than or equal to 
+        32
+        .
+        
+        If all the students pass in your class, return "YES" (without quotes); otherwise, return "NO" (without quotes).
+        const isAllPass = (N, Arr) => 
+        {
+           if(Arr.every((N)=> N>= 32)){
+             return "YES";
+           }
+           else{
+             return "NO";
+           }
+        };
+         </pre>   
+</body>
+
+</html>
